@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="200" y1="0" x2="200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e8e4de"/>
+      <stop offset="0.55" stop-color="#d4cfc7"/>
+      <stop offset="1" stop-color="#b8b0a4"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 90) rotate(90) scale(70)">
+      <stop stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#c4a882" stop-opacity="0.35"/>
+    </radialGradient>
+    <linearGradient id="silhouette" x1="200" y1="120" x2="200" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a4640"/>
+      <stop offset="1" stop-color="#2c2a26"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#sky)"/>
+  <circle cx="280" cy="90" r="48" fill="url(#moon)" opacity="0.9"/>
+  <circle cx="280" cy="90" r="38" fill="#faf8f5" opacity="0.15"/>
+  <!-- shoulders & hair silhouette -->
+  <ellipse cx="200" cy="175" rx="72" ry="80" fill="url(#silhouette)" opacity="0.92"/>
+  <path d="M128 200c8-55 44-88 72-88s64 33 72 88c-22 8-122 8-144 0z" fill="#2c2a26" opacity="0.95"/>
+  <ellipse cx="200" cy="310" rx="110" ry="95" fill="url(#silhouette)" opacity="0.88"/>
+  <!-- soft vignette -->
+  <rect width="400" height="400" fill="url(#sky)" opacity="0" style="mix-blend-mode:multiply"/>
+  <circle cx="200" cy="200" r="195" stroke="#c4a882" stroke-width="0.5" opacity="0.25" fill="none"/>
+</svg>
