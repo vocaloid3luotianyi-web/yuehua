@@ -8,6 +8,7 @@ export const sitePages: SitePage[] = [
   { href: "/story", label: "她的生平" },
   { href: "/justice", label: "公义与追问" },
   { href: "/about", label: "愿逐月华" },
+  { href: "/help", label: "求助与互助" },
   { href: "/reports", label: "相关报道" },
 ];
 
@@ -28,6 +29,7 @@ export const footerVariantToHref = {
   story: "/story",
   justice: "/justice",
   about: "/about",
+  help: "/help",
   reports: "/reports",
 } as const;
 
