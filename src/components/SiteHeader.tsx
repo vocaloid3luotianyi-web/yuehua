@@ -64,7 +64,7 @@ export function SiteHeader() {
             size={18}
             className="text-memorial-gold transition-opacity group-hover:opacity-80"
           />
-          <span className="font-serif text-sm">符月华</span>
+          <span className="font-serif text-sm tracking-widest">符月华纪念站</span>
         </Link>
 
         <nav
