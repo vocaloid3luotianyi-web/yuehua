@@ -4,27 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MoonLogo } from "@/components/MoonLogo";
-import { sitePages } from "@/lib/site-pages";
-
-function isActive(pathname: string, href: string) {
-  return href === "/" ? pathname === "/" : pathname.startsWith(href);
-}
-
-function navLinkClass(active: boolean, variant: "pill" | "menu") {
-  const base = "transition-all duration-300";
-  if (variant === "pill") {
-    return `${base} rounded-full px-3 py-1.5 text-sm ${
-      active
-        ? "bg-memorial-ink text-memorial-bg"
-        : "text-memorial-muted hover:bg-memorial-border/50 hover:text-memorial-ink"
-    }`;
-  }
-  return `${base} block rounded-lg px-4 py-3 font-serif text-base ${
-    active
-      ? "bg-memorial-ink text-memorial-bg"
-      : "text-memorial-ink hover:bg-memorial-border/50"
-  }`;
-}
+import { SiteNav } from "@/components/SiteNav";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -67,23 +47,7 @@ export function SiteHeader() {
           <span className="font-serif text-sm tracking-widest">符月华纪念站</span>
         </Link>
 
-        <nav
-          aria-label="站点导航"
-          className="hidden gap-1 md:flex md:gap-2"
-        >
-          {sitePages.map(({ href, label }) => {
-            const active = isActive(pathname, href);
-            return (
-              <Link
-                key={href}
-                href={href}
-                className={navLinkClass(active, "pill")}
-              >
-                {label}
-              </Link>
-            );
-          })}
-        </nav>
+        <SiteNav pathname={pathname} variant="desktop" />
 
         <button
           type="button"
@@ -132,28 +96,11 @@ export function SiteHeader() {
             aria-label="关闭菜单"
             onClick={() => setMenuOpen(false)}
           />
-          <nav
-            id="mobile-nav"
-            aria-label="站点导航"
-            className="absolute inset-x-0 top-full z-50 border-b border-memorial-border/80 bg-memorial-bg/95 px-5 py-4 shadow-lg shadow-memorial-ink/5 backdrop-blur-md md:hidden"
-          >
-            <ul className="flex flex-col gap-1">
-              {sitePages.map(({ href, label }) => {
-                const active = isActive(pathname, href);
-                return (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      className={navLinkClass(active, "menu")}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <SiteNav
+            pathname={pathname}
+            variant="mobile"
+            onNavigate={() => setMenuOpen(false)}
+          />
         </>
       ) : null}
     </header>

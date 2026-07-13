@@ -1,4 +1,5 @@
 import { PageFooter } from "@/components/PageFooter";
+import { memorialLinkClassName } from "@/lib/link-styles";
 import type { ReportItem, ReportsData } from "@/lib/reports";
 
 type ReportsPageProps = {
@@ -18,7 +19,7 @@ function ReportEntry({ item }: { item: ReportItem }) {
     <li className="group rounded-2xl border border-memorial-border/70 bg-memorial-surface/50 px-5 py-5 transition-colors
       duration-300 hover:border-memorial-warm/40 hover:bg-memorial-surface/80 sm:px-6 sm:py-6">
       <div className="mb-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <span className="font-serif text-sm tracking-wide text-memorial-warm">
+        <span className="font-sans text-xs font-medium tracking-wide text-memorial-muted">
           {item.media}
         </span>
         {dateLabel && (
@@ -31,9 +32,7 @@ function ReportEntry({ item }: { item: ReportItem }) {
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-[1.05rem] leading-relaxed text-memorial-ink transition-colors
-            group-hover:text-memorial-ink hover:underline hover:decoration-memorial-warm/60
-            hover:underline-offset-4"
+          className={`block text-[1.05rem] leading-relaxed ${memorialLinkClassName}`}
         >
           {item.title}
           <span
@@ -55,9 +54,7 @@ function ReportEntry({ item }: { item: ReportItem }) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-memorial-ink/85
-                  transition-colors hover:text-memorial-ink hover:underline hover:decoration-memorial-warm/60
-                  hover:underline-offset-4"
+                className={`inline-flex items-center gap-1.5 text-sm ${memorialLinkClassName}`}
               >
                 {link.label}
                 <span aria-hidden className="text-memorial-muted">↗</span>

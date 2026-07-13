@@ -1,11 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { parseSections, type Section } from "@/lib/article";
 
 const HELP_DIR = path.join(process.cwd(), "res/help");
 const HELP_JSON_PATH = path.join(HELP_DIR, "help.json");
-const SAFETY_MD_PATH = path.join(HELP_DIR, "safety.md");
-
 export type HelpContact = {
   type: "phone" | "wechat" | "email";
   label: string;
@@ -22,13 +19,34 @@ export type HelpOrgItem = {
   region?: string;
 };
 
+export type HelpLinkLocale = "zh-Hans" | "zh-Hant" | "en";
+
 export type HelpLinkItem = {
   id: string;
   name: string;
   summary: string;
   url: string;
-  locale?: string;
+  locale?: HelpLinkLocale;
 };
+
+const LINK_LOCALE_LABELS: Record<HelpLinkLocale, string> = {
+  "zh-Hans": "简体中文",
+  "zh-Hant": "繁体中文",
+  en: "英文",
+};
+
+export function helpLinkLocaleLabel(locale?: string): string | null {
+  if (!locale) return null;
+  if (locale in LINK_LOCALE_LABELS) {
+    return LINK_LOCALE_LABELS[locale as HelpLinkLocale];
+  }
+  if (locale === "zh") return "简体中文";
+  return null;
+}
+
+export function linkCategoryAnchorId(categoryId: string) {
+  return `help-links-${categoryId}`;
+}
 
 export type HelpLinkCategory = {
   id: string;
@@ -66,6 +84,7 @@ export type HelpData = {
   meta: {
     title: string;
     subtitle: string;
+    intro?: string;
     disclaimer: string;
     lastUpdated: string;
   };
@@ -81,11 +100,6 @@ export type HelpData = {
 export function getHelpData(): HelpData {
   const raw = fs.readFileSync(HELP_JSON_PATH, "utf-8");
   return JSON.parse(raw) as HelpData;
-}
-
-export function getHelpSafetySections(): Section[] {
-  const raw = fs.readFileSync(SAFETY_MD_PATH, "utf-8");
-  return parseSections(raw);
 }
 
 export function phoneHref(value: string): string {

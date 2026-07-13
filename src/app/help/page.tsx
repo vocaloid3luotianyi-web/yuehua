@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { HelpPage } from "@/components/HelpPage";
-import { getHelpData, getHelpSafetySections } from "@/lib/help";
+import { getHelpData } from "@/lib/help";
 
 export const metadata: Metadata = {
-  title: "求助与互助 · 符月华",
+  title: "求助与互助",
   description:
-    "性别暴力、精神控制受害者求助渠道与相关资源链接。你并不孤单。",
+    "延续月华温暖陌生人的精神，整理性别暴力与精神控制相关求助渠道与延伸阅读，供有需要时参考。",
 };
 
 export default function HelpRoute() {
   const data = getHelpData();
-  const safetySections = getHelpSafetySections();
 
-  return <HelpPage data={data} safetySections={safetySections} />;
+  return <HelpPage data={data} />;
 }

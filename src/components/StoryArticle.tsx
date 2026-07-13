@@ -12,6 +12,7 @@ export function StoryArticle({ sections }: StoryArticleProps) {
   return (
     <ArticleReadingLayout
       footerVariant="story"
+      proseVariant="story"
       sections={sections}
       sectionId={(section, index) =>
         sectionIdForTitle(section.title) ?? `section-${index}`

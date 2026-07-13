@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
-          "var(--font-sans)",
+          "Noto Sans SC",
           "system-ui",
           "-apple-system",
           "PingFang SC",
@@ -30,9 +30,16 @@ const config: Config = {
           "sans-serif",
         ],
         serif: [
-          "var(--font-serif)",
           "Noto Serif SC",
           "Songti SC",
+          "STSong",
+          "serif",
+        ],
+        kai: [
+          "KaiTi",
+          "Kaiti SC",
+          "STKaiti",
+          "楷体",
           "serif",
         ],
       },

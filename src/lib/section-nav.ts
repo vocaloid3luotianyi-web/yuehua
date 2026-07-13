@@ -2,6 +2,7 @@ export type NavItem = {
   id: string;
   label: string;
   sublabel?: string;
+  indent?: boolean;
 };
 
 export function getScrollOffset() {

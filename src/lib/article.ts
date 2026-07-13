@@ -10,9 +10,15 @@ const PATHS = {
   about: path.join(ARTICLE_DIR, "愿逐月华.md"),
 } as const;
 
+export type Subsection = {
+  title: string;
+  body: string;
+};
+
 export type Section = {
   title: string;
   body: string;
+  subsections?: Subsection[];
 };
 
 function readFile(relative: keyof typeof PATHS): string {

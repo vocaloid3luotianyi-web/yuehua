@@ -12,7 +12,7 @@ export const storyTimeline: TimelineNode[] = [
   { id: "chapter-3", year: "2017–2019", label: "阴霾", match: "第三章" },
   { id: "chapter-4", year: "2019–2020", label: "撕裂", match: "第四章" },
   { id: "chapter-5", year: "2020–2021", label: "重启", match: "第五章" },
-  { id: "chapter-6", year: "2021–2023", label: "华师大", match: "第六章" },
+  { id: "chapter-6", year: "2021–2023", label: "大学", match: "第六章" },
   { id: "chapter-7", year: "2023–2024", label: "抗争", match: "第七章" },
   { id: "chapter-8", year: "2025.1", label: "月光", match: "第八章" },
   { id: "chapter-9", year: "2025.2", label: "归家", match: "第九章" },

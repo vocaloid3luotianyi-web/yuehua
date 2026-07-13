@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { NavItem } from "@/lib/section-nav";
 
 type MobileTocDrawerProps = {
@@ -51,6 +52,11 @@ export function MobileTocDrawer({
   title = "目录",
 }: MobileTocDrawerProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -74,9 +80,9 @@ export function MobileTocDrawer({
     setIsOpen(false);
   };
 
-  if (items.length === 0) return null;
+  if (items.length === 0 || !mounted) return null;
 
-  return (
+  return createPortal(
     <div className="lg:hidden">
       <button
         type="button"
@@ -123,6 +129,8 @@ export function MobileTocDrawer({
                     type="button"
                     onClick={() => handleNavigate(item.id)}
                     className={`rounded-lg py-2.5 text-left transition-colors ${
+                      item.indent ? "pl-4" : ""
+                    } ${
                       active
                         ? "text-memorial-gold"
                         : "text-memorial-ink/80 active:text-memorial-gold"
@@ -133,7 +141,11 @@ export function MobileTocDrawer({
                         {item.sublabel}
                       </span>
                     )}
-                    <span className="block border-b border-memorial-border/20 pb-2 font-serif text-sm">
+                    <span
+                      className={`block border-b border-memorial-border/20 pb-2 font-serif ${
+                        item.indent ? "text-xs" : "text-sm"
+                      }`}
+                    >
                       {item.label}
                     </span>
                   </button>
@@ -143,6 +155,7 @@ export function MobileTocDrawer({
           </div>
         </>
       )}
-    </div>
+    </div>,
+    document.body,
   );
 }

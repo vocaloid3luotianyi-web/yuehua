@@ -34,14 +34,18 @@ export function SectionNav({
                 <button
                   type="button"
                   onClick={() => scrollTo(item.id)}
-                  className={`group w-full rounded-lg py-2 pr-2 text-left text-sm transition-colors duration-300 ${
+                  className={`group w-full rounded-lg py-2 pr-2 text-left transition-colors duration-300 ${
+                    item.indent ? "py-1.5 text-xs" : "text-sm"
+                  } ${
                     active
                       ? "text-memorial-ink"
                       : "text-memorial-muted hover:text-memorial-ink/80"
                   }`}
                 >
                   <span
-                    className={`block border-l-2 pl-3 transition-colors duration-300 ${
+                    className={`block border-l-2 transition-colors duration-300 ${
+                      item.indent ? "pl-6" : "pl-3"
+                    } ${
                       active
                         ? "border-memorial-warm text-memorial-ink"
                         : "border-transparent group-hover:border-memorial-border"

@@ -5,6 +5,7 @@ import {
   getAdjacentPages,
   type FooterVariant,
 } from "@/lib/site-pages";
+import { SITE_TITLE } from "@/lib/site";
 
 type PageFooterProps = {
   variant?: FooterVariant;
@@ -68,6 +69,7 @@ export function PageFooter({ variant = "home" }: PageFooterProps) {
           <p className="mt-3 text-xs tracking-[0.25em] text-memorial-muted/60">
             符月华纪念站
           </p>
+
         </div>
       </div>
     </footer>

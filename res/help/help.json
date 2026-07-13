@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "求助与互助",
-    "subtitle": "你并不孤单。以下渠道经过整理，供有需要时参考。",
-    "disclaimer": "本站为纪念与公益信息整理，不构成法律或医疗建议。紧急情况请优先拨打当地急救与报警电话。",
+    "subtitle": "月华生前曾把写着「让宇宙替你背负重担」的纸条分给陌生人。本站整理以下渠道，供有需要时参考——愿同样的温暖，也能照到你身上。",
+    "disclaimer": "以上信息仅供查阅，不构成法律或医疗建议；渠道如有变动，以各机构公布为准。",
     "lastUpdated": "2026-07"
   },
   "quickExit": {
-    "enabled": true,
+    "enabled": false,
     "label": "安全退出",
-    "url": "https://www.baidu.com"
+    "url": "https://weibo.com"
   },
   "emergency": [
     {
@@ -16,61 +16,136 @@
       "label": "报警电话",
       "value": "110",
       "type": "phone",
-      "note": "如人身安全受到即刻威胁，请立刻拨打，并可要求开具《验伤通知书》或《家庭暴力告诫书》。"
+      "note": "人身安全受到威胁时请立刻拨打。"
     },
     {
       "id": "women-hotline",
       "label": "妇女维权热线",
       "value": "12338",
       "type": "phone",
-      "note": "全国妇联公益服务热线，提供法律咨询、心理疏导与维权指导。"
+      "note": "全国妇联公益服务热线，提供法律咨询、调解、心理疏导。"
     },
     {
       "id": "legal-aid",
       "label": "法律援助",
       "value": "12348",
       "type": "phone",
-      "note": "免费法律咨询与法律援助申请指导。"
+      "note": "免费法律咨询与援助申请指导，可咨询人身安全保护令。"
     }
   ],
   "sections": [
     {
       "id": "organizations",
-      "title": "专业援助机构",
-      "description": "可提供长期跟进、心理疏导与法律援助的民间组织。",
+      "title": "援助机构",
+      "description": "以下机构长期关注性别暴力议题，可提供咨询、跟进与转介。",
       "items": [
         {
           "id": "yuanzhong",
-          "name": "北京源众反家暴热线",
-          "summary": "国内资深反家暴、反性骚扰机构，提供心理疏导、法律援助与紧急庇护。",
+          "name": "源众家庭与社区发展服务中心",
+          "summary": "国内资深反家暴、反性骚扰机构。提供法律咨询、心理与社工支持、紧急救助金；运营「家暴求助」微信小程序。",
+          "url": "https://www.bjyuanzhong.org.cn/",
           "contacts": [
-            { "type": "phone", "label": "热线", "value": "010-89941101" },
-            { "type": "wechat", "label": "微信", "value": "源众" }
+            { "type": "phone", "label": "支持热线", "value": "17701242202" },
+            { "type": "wechat", "label": "公众号", "value": "源众家庭与社区发展服务中心" },
+            { "type": "wechat", "label": "小程序", "value": "微信搜索「家暴求助」" },
+            { "type": "email", "label": "邮箱", "value": "bjyuanzhong@126.com" }
           ],
-          "tags": ["家暴", "性骚扰", "庇护"],
+          "tags": ["家暴", "性骚扰", "性侵害", "紧急救助"],
           "region": "全国"
         },
         {
           "id": "qianqian",
           "name": "千千律师事务所",
-          "summary": "为弱势女性提供免费法律援助，在反性骚扰、反家暴领域具有权威。",
+          "summary": "依托北大妇女法律研究与服务中心成立，为弱势女性提供免费法律援助，在反性骚扰、反家暴与数字暴力领域具有权威。旗下公益项目「橙雨伞」曾发布性别暴力科普，部分内容可在延伸阅读中查阅。",
+          "url": "https://woman-legalaid.org.cn/",
           "contacts": [
-            { "type": "phone", "label": "电话", "value": "010-84897137" }
+            { "type": "phone", "label": "电话", "value": "010-84833270" },
+            { "type": "phone", "label": "电话", "value": "010-84833276" },
+            { "type": "email", "label": "邮件咨询", "value": "ngo@woman-legalaid.org.cn" }
           ],
-          "tags": ["法律援助", "女性权益"],
+          "tags": ["法律援助", "女性权益", "数字暴力"],
           "region": "全国"
+        },
+        {
+          "id": "hongfeng",
+          "name": "北京红枫妇女心理咨询服务中心",
+          "summary": "1988 年创立的中国首家民间妇女组织，1992 年开通全国第一条妇女热线，提供心理咨询、反家暴支持与社区干预。",
+          "url": "http://www.maple.org.cn/",
+          "contacts": [
+            { "type": "phone", "label": "公益热线", "value": "010-68333388" },
+            { "type": "wechat", "label": "公众号", "value": "红枫中心" }
+          ],
+          "tags": ["心理咨询", "家暴", "妇女热线"],
+          "region": "全国"
+        },
+        {
+          "id": "equality-beijing",
+          "name": "为平妇女支持项目",
+          "summary": "倡导性别平等与反性别暴力，提供中英双语支持热线、公众教育与反暴力能力建设。",
+          "url": "https://www.equality-beijing.org/",
+          "contacts": [
+            { "type": "phone", "label": "支持热线", "value": "15117905157" },
+            { "type": "wechat", "label": "微信", "value": "equality-beijing" },
+            { "type": "email", "label": "邮箱", "value": "equality-cn@hotmail.com" }
+          ],
+          "tags": ["性别平等", "反暴力", "双语支持"],
+          "region": "全国"
+        },
+        {
+          "id": "pengxing",
+          "name": "深圳市鹏星家庭暴力防护中心",
+          "summary": "广东省首家专业社工主导的反家暴机构，提供心理咨询、法律咨询及受暴妇女儿童救急金。",
+          "url": "http://jbfh.pengxingsw.org/",
+          "contacts": [
+            { "type": "phone", "label": "热线", "value": "0755-25950003" }
+          ],
+          "tags": ["家暴", "心理咨询", "救急金"],
+          "region": "全国"
+        },
+        {
+          "id": "white-ribbon",
+          "name": "白丝带反对性别暴力男性公益热线",
+          "summary": "为性别暴力施暴者及有暴力倾向者提供行为改变辅导，也为受暴者与目击者提供心理支持。工作日 8:00–22:00 接听。",
+          "contacts": [
+            { "type": "phone", "label": "热线", "value": "400-011-0391" }
+          ],
+          "tags": ["性别暴力", "心理辅导", "行为干预"],
+          "region": "全国"
+        },
+        {
+          "id": "rainlily",
+          "name": "关注妇女性暴力协会 · 风雨兰",
+          "summary": "香港性暴力危机支援机构，提供热线、网上支援、法律咨询，以及私密影像下架（Ta-DA）等服务；网站含简繁英内容。",
+          "url": "https://rainlily.org.hk/",
+          "contacts": [
+            { "type": "phone", "label": "性暴力求助热线", "value": "2375 5322" },
+            { "type": "phone", "label": "SafeChat（WhatsApp）", "value": "2375 5322" },
+            { "type": "email", "label": "邮箱", "value": "violence@rainlily.org.hk" }
+          ],
+          "tags": ["性暴力", "影像性暴力", "法律咨询"],
+          "region": "香港"
         }
       ]
     },
     {
       "id": "crisis",
-      "title": "心理危机干预",
-      "description": "当你感到难以承受、有自伤念头时，可以拨打以下热线。",
+      "title": "心理支持",
+      "description": "若情绪已难以独自承受，可先拨打以下热线。",
       "items": [
+        {
+          "id": "mental-health-12356",
+          "name": "全国心理援助热线",
+          "summary": "国家统一心理援助热线，24 小时免费接听。",
+          "contacts": [
+            { "type": "phone", "label": "热线", "value": "12356" }
+          ],
+          "tags": ["危机干预", "24小时"],
+          "region": "全国"
+        },
         {
           "id": "hope24",
           "name": "希望24热线",
-          "summary": "防自杀及危机干预。",
+          "summary": "生命教育与危机干预，防自杀及心理危机支持。",
           "contacts": [
             { "type": "phone", "label": "热线", "value": "400-161-9995" }
           ],
@@ -80,7 +155,7 @@
         {
           "id": "bj-crisis",
           "name": "北京心理危机研究与干预中心",
-          "summary": "24小时心理危机干预与援助。",
+          "summary": "24 小时心理危机干预与援助。",
           "contacts": [
             { "type": "phone", "label": "热线", "value": "800-810-1117" },
             { "type": "phone", "label": "北京", "value": "010-82951332" }
@@ -92,12 +167,127 @@
     },
     {
       "id": "links",
-      "title": "相关链接",
-      "description": "海内外性别平权、反暴力与心理科普资源。",
+      "title": "延伸阅读",
+      "description": "以下资源帮助读懂关系中的伤害与自救；含深度报道、播客与成长类内容，供进一步查阅。",
       "categories": [
         {
-          "id": "feminism",
-          "title": "性别平权",
+          "id": "tools-community",
+          "title": "实用工具与社群",
+          "items": [
+            {
+              "id": "womany",
+              "name": "女人迷 Womany",
+              "summary": "华语圈女性生活与成长平台，关注性别平等、职场领导力与心理健康。",
+              "url": "https://womany.net/",
+              "locale": "zh-Hant"
+            },
+            {
+              "id": "lean-in-china",
+              "name": "励媖 LeanIn",
+              "summary": "女性职场与导师链接社群，推广互助文化与领导力培养。",
+              "url": "https://leanin.org/circles-network/lean-in-china-international",
+              "locale": "en"
+            },
+            {
+              "id": "sheaspire",
+              "name": "她渴望 SheAspire",
+              "summary": "台湾女性成长与创业赋能平台，提供人物专访、活动课程与专栏文章。",
+              "url": "https://www.sheaspire.com.tw/index.php",
+              "locale": "zh-Hant"
+            }
+          ]
+        },
+        {
+          "id": "depth-media",
+          "title": "深度报道",
+          "items": [
+            {
+              "id": "initium",
+              "name": "端传媒 Initium Media",
+              "summary": "华语深度调查与数据新闻，常设性别、性别暴力等专题，以个案拆解东亚社会的结构性问题。",
+              "url": "https://theinitium.com/tag/sex-and-gender-zh-hans/",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "jiemian",
+              "name": "界面新闻",
+              "summary": "综合性深度华语媒体，界面调查与专题常追踪职场歧视、性别暴力与社会公共议题。",
+              "url": "https://www.jiemian.com/",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "orange-umbrella-jmedia",
+              "name": "橙雨伞公益 · 界面财经号",
+              "summary": "千千律所旗下公益性别媒体，曾在界面 JMedia 发布反性别暴力科普；微信公众号已停更，此处为历史文章检索入口。",
+              "url": "https://www.jiemian.com/account/1258.html",
+              "locale": "zh-Hans"
+            }
+          ]
+        },
+        {
+          "id": "advocacy-survivor",
+          "title": "倡导与同伴支持",
+          "items": [
+            {
+              "id": "workplace-toolkit",
+              "name": "职场反性骚扰开源工具包",
+              "summary": "BottleDream、复恩法律等联合制作，帮助组织建立预防、投诉与调查机制。",
+              "url": "https://workplacesupport.gitbook.io/anti-sexual-harassment-toolkit",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "nuannuan",
+              "name": "暖暖 Sunshine",
+              "summary": "台湾首个由性暴力幸存者发起的组织，提供同伴社群、性教育倡导与幸存者资源串连（非急救热线）。",
+              "url": "https://nuannuansunshine.org/",
+              "locale": "zh-Hant"
+            }
+          ]
+        },
+        {
+          "id": "podcasts",
+          "title": "播客",
+          "items": [
+            {
+              "id": "stochastic-volatility",
+              "name": "随机波动",
+              "summary": "泛文化播客，以女性主义视角探讨性别结构、情感劳动与东亚社会处境。",
+              "url": "https://www.xiaoyuzhoufm.com/podcast/5e7cc741418a84a046b0c2bd",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "be-a-dodo",
+              "name": "别任性",
+              "summary": "从性别角度探讨身体自主权、亲密关系权力与女性主义议题，风格更先锋。",
+              "url": "https://www.xiaoyuzhoufm.com/podcast/5e7c6769418a84a046787364",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "money-girls",
+              "name": "搞钱女孩",
+              "summary": "访谈各行业女性的搞钱与创业经历，聚焦经济独立与职场赋能。",
+              "url": "https://www.xiaoyuzhoufm.com/podcast/63d945ece725b5378a158d29",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "their-choices",
+              "name": "她们的选择",
+              "summary": "女性成长访谈，探讨职业卡点、生育阵痛与 30 岁前后的人生选择。",
+              "url": "https://podcasts.apple.com/cn/podcast/id1830533677",
+              "locale": "zh-Hans"
+            },
+            {
+              "id": "not-only-feminism",
+              "name": "不只是女性主义",
+              "summary": "台湾女性学学会与镜好听联合制作，邀请性别研究学者系统科普日常中的性别议题。",
+              "url": "https://www.mirrorvoice.com.tw/podcasts/232",
+              "locale": "zh-Hant"
+            }
+          ]
+        },
+        {
+          "id": "english",
+          "title": "英文资源",
           "items": [
             {
               "id": "unwomen",
@@ -112,18 +302,12 @@
               "summary": "国际知名保护女性和女孩法律权益的组织。",
               "url": "https://www.equalitynow.org/",
               "locale": "en"
-            }
-          ]
-        },
-        {
-          "id": "ipv",
-          "title": "反亲密关系暴力",
-          "items": [
+            },
             {
               "id": "loveisrespect",
               "name": "Love is Respect",
-              "summary": "识别精神控制、有毒关系的自测与科普。",
-              "url": "https://www.loveisrespect.org/",
+              "summary": "性别暴力伤害类型识别与应对指南（英文原文；本站「识别伤害与自我保护」已作中文改编）。",
+              "url": "https://www.loveisrespect.org/resources/types-of-abuse/",
               "locale": "en"
             },
             {
@@ -133,19 +317,6 @@
               "url": "https://www.rainn.org/",
               "locale": "en"
             },
-            {
-              "id": "thatsnotcool",
-              "name": "That's Not Cool",
-              "summary": "防止网络跟踪、数码骚扰和同伴控制。",
-              "url": "https://thatsnotcool.com/",
-              "locale": "en"
-            }
-          ]
-        },
-        {
-          "id": "psychology",
-          "title": "心理与关系科普",
-          "items": [
             {
               "id": "psychology-today",
               "name": "Psychology Today",

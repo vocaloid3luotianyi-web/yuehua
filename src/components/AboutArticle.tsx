@@ -20,7 +20,7 @@ export function AboutArticle({ preamble, sections }: AboutArticleProps) {
             愿逐月华
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-memorial-muted">
-            关于这座纪念站的意义
+            关于符月华纪念站的意义
           </p>
           {preamble && (
             <div className="prose-memorial mx-auto mt-10 max-w-lg text-center font-serif text-memorial-ink/85 [&_blockquote]:my-0 [&_blockquote]:border-none [&_blockquote]:p-0 [&_blockquote]:text-lg [&_blockquote]:italic [&_blockquote]:leading-relaxed [&_blockquote]:md:text-xl [&_em]:not-italic [&_p]:leading-relaxed [&_p]:text-memorial-muted">

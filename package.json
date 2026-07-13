@@ -11,6 +11,8 @@
     "deploy": "npm run build && npx wrangler pages deploy out --project-name=yuehua"
   },
   "dependencies": {
+    "@fontsource/noto-sans-sc": "^5.2.9",
+    "@fontsource/noto-serif-sc": "^5.2.8",
     "gray-matter": "^4.0.3",
     "next": "^15.1.0",
     "react": "^19.0.0",
